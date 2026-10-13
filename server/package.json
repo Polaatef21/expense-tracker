@@ -1,0 +1,40 @@
+{
+  "name": "expense-tracker-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Express + PostgreSQL REST API for the Expense Tracker",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:check": "node scripts/check-db.js",
+    "db:migrate": "node scripts/migrate.js",
+    "db:migrate:test": "node scripts/migrate.js --test",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "bcrypt": "6.0.0",
+    "cors": "2.8.6",
+    "dotenv": "18.0.4",
+    "exceljs": "4.4.0",
+    "express": "5.2.1",
+    "express-rate-limit": "8.7.0",
+    "helmet": "8.3.0",
+    "jsonwebtoken": "9.0.3",
+    "pg": "8.23.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "supertest": "7.3.0",
+    "vitest": "5.0.2"
+  },
+  "overrides": {
+    "exceljs": {
+      "uuid": "11.1.1"
+    }
+  }
+}
